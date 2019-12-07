@@ -68,9 +68,9 @@
                 android:layout_marginBottom="11dp"
                 android:layout_marginLeft="6dp"
                 android:layout_marginStart="6dp"
-                android:background="#6eda64"
+                android:background="#AA2912"
                 android:text="PLACE ORDER"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="#FEFCFC " />
 
 
         </RelativeLayout>
