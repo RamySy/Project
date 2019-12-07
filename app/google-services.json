@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1032853142727",
+    "firebase_url": "https://projetandroid-1786a.firebaseio.com",
+    "project_id": "projetandroid-1786a",
+    "storage_bucket": "projetandroid-1786a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1032853142727:android:35afaa9413432e081b92e2",
+        "android_client_info": {
+          "package_name": "com.resto.project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1032853142727-sfrv3d6bv459h3fgpiijmjpir90ll8q1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQW7WZerGKwHnLs_YI6-R3rPx1-h3GoOo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1032853142727-sfrv3d6bv459h3fgpiijmjpir90ll8q1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
