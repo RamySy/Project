@@ -10,11 +10,11 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Ar" />
+        android:text="@string/fr" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Ar" />
+        android:text="@string/En" />
 
 
 </LinearLayout>
