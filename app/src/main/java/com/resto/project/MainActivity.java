@@ -6,6 +6,9 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import android.view.View;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.content.Intent;
 
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -18,12 +21,23 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import butterknife.BindView;
+
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 import android.view.Menu;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
+
+    /*@BindView(R.id.sign_out)
+    Button signOut;*/
+
+    private FirebaseAuth firebaseAuth;
+    private FirebaseAuth.AuthStateListener fireAuthListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +46,15 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
+        firebaseAuth = FirebaseAuth.getInstance();
         fab.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                firebaseAuth.signOut();
+                MainActivity.this.startActivity(new Intent(MainActivity.this, Login.class));
+                MainActivity.this.finish();
+                Snackbar.make(view, "u have been signed out", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -66,4 +85,24 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+   /* @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.sign_out) {
+            firebaseAuth.signOut();
+            onResume();
+        }
+        startActivity(new Intent(MainActivity.this, Login.class));
+        return true;
+    }*/
+
+    /*@Override
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
+        if (menuItem.getItemId() == R.id.sign_out) {
+            firebaseAuth.signOut();
+            return true;
+        }
+        return super.onOptionsItemSelected(menuItem);
+    }*/
 }
