@@ -85,7 +85,7 @@ public class Login extends AppCompatActivity {
         resetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Login.this.startActivity(new Intent(Login.this, SignUp.class));
+                Login.this.startActivity(new Intent(Login.this, PassRes.class));
             }
         });
 
@@ -122,9 +122,9 @@ public class Login extends AppCompatActivity {
                                         Toast.makeText(Login.this, Login.this.getString(R.string.auth_failed), Toast.LENGTH_SHORT).show();
                                     }
 
-                                } else if(useremail.contentEquals("admin@admin.com")){
+                                /*} else if(useremail.contentEquals("admin@admin.com")){
                                     Login.this.startActivity(new Intent(Login.this, MainActivity.class));
-                                    Login.this.finish();
+                                    Login.this.finish();*/
                                 } else {
                                     Login.this.startActivity(new Intent(Login.this, MainActivity.class));
                                     Login.this.finish();

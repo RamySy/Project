@@ -53,7 +53,7 @@ public class SignUp extends AppCompatActivity {
         resetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SignUp.this.startActivity(new Intent(SignUp.this, Login.class));
+                SignUp.this.startActivity(new Intent(SignUp.this, PassRes.class));
             }
         });
 
