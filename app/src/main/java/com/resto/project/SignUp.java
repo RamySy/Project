@@ -50,12 +50,12 @@ public class SignUp extends AppCompatActivity {
         //firebase authentication instance
         firebaseAuth = FirebaseAuth.getInstance();
 
-        resetButton.setOnClickListener(new View.OnClickListener() {
+        /*resetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 SignUp.this.startActivity(new Intent(SignUp.this, PassRes.class));
             }
-        });
+        });*/
 
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
