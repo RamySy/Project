@@ -10,7 +10,7 @@ public class SendViewModel extends ViewModel {
 
     public SendViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is where u change ur language");
+        mText.setValue("Select Language");
     }
 
     public LiveData<String> getText() {
