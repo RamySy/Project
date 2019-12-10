@@ -1,11 +1,13 @@
 package com.resto.project;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Toast;
 import com.resto.project.Viewholder.FoodViewHolder;
 import com.resto.project.Interface.ItemClickListener;
@@ -52,10 +54,21 @@ public class FoodList extends AppCompatActivity {
     }
 
     private void loadListFood(String categoryId) {
-        adapter = new FirebaseRecyclerAdapter<Food, FoodViewHolder>(Food.class,R.layout.,
+        adapter = new FirebaseRecyclerAdapter<Food, FoodViewHolder>(Food.class,R.layout.activity_food_item,
                 FoodViewHolder.class,foodList.orderByChild("MenuId").equalTo(categoryId))
                 //is like select query
         {
+            @NonNull
+            @Override
+            public FoodViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                return null;
+            }
+
+            @Override
+            protected void onBindViewHolder(@NonNull FoodViewHolder holder, int position, @NonNull Food model) {
+
+            }
+
             @Override
             protected void populateViewHolder(FoodViewHolder viewHolder, Food model, int position) {
                 viewHolder.food_name.setText(model.getName());
